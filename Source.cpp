@@ -2,7 +2,7 @@
 #include <fstream>
 using namespace std;
 int main();
-                           //функції перевірки введених даних
+                           
 void checkInput()
 {
 	if (cin.fail())
@@ -60,7 +60,7 @@ int main()
 	int  n; double x1, x2, step;  char save;
 
 	ofstream fout;
-	fout.open("file.txt", ofstream::app); //створення файлу
+	fout.open("file.txt", ofstream::app); 
 
 	cout << "Do you want to save results? (Y/N)   ";
 	cin >> save;
@@ -70,7 +70,7 @@ int main()
 	case 'Y':;
 	}
 start:
-	try // обробка виключень
+	try // Г®ГЎГ°Г®ГЎГЄГ  ГўГЁГЄГ«ГѕГ·ГҐГ­Гј
 	{
 		fout << "Input: ";
 		cout << "Enter:\n[x1]";
@@ -112,7 +112,7 @@ start:
 		cout << ex << endl;
 		cin.clear();
 		cin.ignore();
-		goto start;    //додано можливість повторного введення
+		goto start;   
 	}
 	catch (...)                   
 	{
